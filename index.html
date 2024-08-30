@@ -87,6 +87,7 @@
         <h1>Buttons</h1>
         <button onclick="Telegram.WebApp.expand();">Expand Webview</button>
         <button onclick="toggleMainButton();">Toggle Main Button</button>
+        <button onclick="consoleUserData();">Console User Data</button>
     </main>
     <div id="viewport"></div>
     <div id="viewport-params-size"></div>
@@ -133,6 +134,13 @@
             } else {
                 Telegram.WebApp.MainButton.show();
             }
+        };
+
+        // Function to console user data button
+        function consoleUserData() {
+            console.log('Telegram.WebApp', Telegram.WebApp);
+            console.log('Telegram.WebApp.initData', Telegram.WebApp.initData);
+            console.log('Telegram.WebApp.initDataUnsafe', Telegram.WebApp.initDataUnsafe);
         };
 
         function setViewportData() {
